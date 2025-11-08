@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+        }
+
+        .header {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        #top {
+            width: 100%;
+            height: 40px;
+            background:linear-gradient(1deg, #a15e5e,#267285);
+            border-radius: 15px;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+
+        }
+
+        .medium {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        #uno, #dos {
+            width: 7%;
+            height: 40px;
+            background-color: rgb(145, 148, 147);
+            border-radius: 15px;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+        }
+
+        #tres {
+            width: 70%;
+            height: 40px;
+            background-color: rgb(181, 181, 185);
+            border-radius: 15px;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+        }
+
+        #cuatro {
+            width: 10%;
+            height: 40px;
+            background-color: rgb(145, 148, 147);
+            border-radius: 15px;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+        }
+
+        .bootom {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #b-1, #b-9 {
+            width: 15%;
+            height: 40px;
+            border-radius: 15px;
+            background-color: #b9a1c0;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+        }
+
+        #b-2, #b-3, #b-4, #b-5, #b-6, #b-7, #b-8 {
+            width: 5%;
+            height: 15px;
+            background-color: #a583e4;
+            border-radius: 15px;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+        }
+
+        #content {
+            width: 100%;
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .cont-left {
+            display: flex;
+            width: 40%;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cont-right {
+            background-color: #c2b4b4;
+            width: 60%;
+            height: 400px;
+            border-radius: 15px;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+        }
+
+        #arriba, #abajo {
+            width: 95%;
+            height: 190px;
+            background-color: #c5adad;
+            border-radius: 15px;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+        }
+
+
+        #cards{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        
+        #cards .card {
+            display: flex;
+            background-color: #b2b6b6;
+            width: 15%;
+            height: 224px;
+            border-radius: 16px;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+        #cards .card .img{
+            background-color: #d0d4d4;
+            width: 50%;
+            height: 120px;
+            border-radius: 15px;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+        }
+
+        #cards .card .text{
+            width: 60%;
+            height: 20px;
+            background-color: #d1d6d6;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+            border-radius: 15px;
+        }
+
+        #carousel{
+            background-color: #b9a1c0;
+            width: 100%;
+            height: 350px;
+            display: flex;
+            overflow-x: scroll;
+            overflow-x: visible;
+            justify-content: space-between;
+            border-radius: 16px;
+        }
+
+        #carousel .card{
+            display: flex;
+            background-color: #b2b6b6;
+            width: 15%;
+            height: 400px;
+            border-radius: 16px;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 60px;
+        }
+
+        #carousel .card .number{
+            width: 10%;
+            height: 20px;
+            background-color: #d1d6d6;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+            margin-right: 206px;
+        }
+
+        #carousel .card .img{
+            width: 74%;
+            height: 190px;
+            background-color: #d1d6d6;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+            border-radius: 15px;
+        }
+
+        #carousel .card .text{
+            width: 83%;
+            height: 20px;
+            background-color: #d1d6d6;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+            border-radius: 15px;
+        }
+
+        #carousel .card .textsa{
+            width: 83%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #carousel .card .textsa .textsss{
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        #carousel .card .textsa .textsss .textA1{
+            background-color: #d1d6d6;
+            width: 60%;
+            height: 10px;
+            border-radius: 16px;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+            margin-right: 141px;
+        }
+
+        #carousel .card .textsa .textsss .textA2{
+            background-color: #d1d6d6;
+            width: 80%;
+            height: 10px;
+            border-radius: 16px;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+        }
+
+        .box{
+            width: 14%;
+            height: 30px;
+            background-color: #d1d6d6;
+            border-radius: 5px;
+            box-shadow: 0px 1px 6px rgb(54, 54, 54, 0.5);
+        }
+
+        .conts{
+            width: 100%;
+            margin-top: 160px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cont1, .cont2{
+            width: 49.5%;
+            height: 200px;
+            background-color: #267285;
+            border-radius: 16px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div id="top"></div>
+        
+
+        <div class="medium">
+            <div id="uno"></div>
+            <div id="dos"></div>
+            <div id="tres"></div>
+            <div id="cuatro"></div>
+        </div>
+
+        <div id="content">
+            <div class="cont-left">
+                <div id="arriba"></div>
+                <div id="abajo"></div>
+            </div>
+            <div class="cont-right"></div>
+        </div>
+    </div>
+
+        <div id="cards">
+            <div class="card">
+                <div class="img"></div>
+                <div class="text"></div>
+            </div>
+
+            <div class="card">
+                <div class="img"></div>
+                <div class="text"></div>
+            </div>
+
+            <div class="card">
+                <div class="img"></div>
+                <div class="text"></div>
+            </div>
+
+            <div class="card">
+                <div class="img"></div>
+                <div class="text"></div>
+            </div>
+
+            <div class="card">
+                <div class="img"></div>
+                <div class="text"></div>
+            </div>
+
+            <div class="card">
+                <div class="img"></div>
+                <div class="text"></div>
+            </div>
+        </div>
+
+        <div id="carousel">
+            <div class="card">
+                <div class="number"></div>
+                <div class="img"></div>
+                <div class="text"></div>
+                <div class="text"></div>
+                <div class="textsa">
+                    <div class="textsss">
+                        <div class="textA1"></div>
+                        <div class="textA2"></div>
+                        </div>
+                    <div class="box"></div>
+                    
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="number"></div>
+                <div class="img"></div>
+                <div class="text"></div>
+                <div class="text"></div>
+                <div class="textsa">
+                    <div class="textsss">
+                        <div class="textA1"></div>
+                        <div class="textA2"></div>
+                        </div>
+                    <div class="box"></div>
+                    
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="number"></div>
+                <div class="img"></div>
+                <div class="text"></div>
+                <div class="text"></div>
+                <div class="textsa">
+                    <div class="textsss">
+                        <div class="textA1"></div>
+                        <div class="textA2"></div>
+                        </div>
+                    <div class="box"></div>
+                    
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="number"></div>
+                <div class="img"></div>
+                <div class="text"></div>
+                <div class="text"></div>
+                <div class="textsa">
+                    <div class="textsss">
+                        <div class="textA1"></div>
+                        <div class="textA2"></div>
+                        </div>
+                    <div class="box"></div>
+                    
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="number"></div>
+                <div class="img"></div>
+                <div class="text"></div>
+                <div class="text"></div>
+                <div class="textsa">
+                    <div class="textsss">
+                        <div class="textA1"></div>
+                        <div class="textA2"></div>
+                        </div>
+                    <div class="box"></div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="conts">
+            <div class="cont1"></div>
+            <div class="cont2"></div>
+        </div>
+
+                <div id="carousel">
+            <div class="card">
+                <div class="number"></div>
+                <div class="img"></div>
+                <div class="text"></div>
+                <div class="text"></div>
+                <div class="textsa">
+                    <div class="textsss">
+                        <div class="textA1"></div>
+                        <div class="textA2"></div>
+                        </div>
+                    <div class="box"></div>
+                    
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="number"></div>
+                <div class="img"></div>
+                <div class="text"></div>
+                <div class="text"></div>
+                <div class="textsa">
+                    <div class="textsss">
+                        <div class="textA1"></div>
+                        <div class="textA2"></div>
+                        </div>
+                    <div class="box"></div>
+                    
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="number"></div>
+                <div class="img"></div>
+                <div class="text"></div>
+                <div class="text"></div>
+                <div class="textsa">
+                    <div class="textsss">
+                        <div class="textA1"></div>
+                        <div class="textA2"></div>
+                        </div>
+                    <div class="box"></div>
+                    
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="number"></div>
+                <div class="img"></div>
+                <div class="text"></div>
+                <div class="text"></div>
+                <div class="textsa">
+                    <div class="textsss">
+                        <div class="textA1"></div>
+                        <div class="textA2"></div>
+                        </div>
+                    <div class="box"></div>
+                    
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="number"></div>
+                <div class="img"></div>
+                <div class="text"></div>
+                <div class="text"></div>
+                <div class="textsa">
+                    <div class="textsss">
+                        <div class="textA1"></div>
+                        <div class="textA2"></div>
+                        </div>
+                    <div class="box"></div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+
+</body>
+
+</html>
